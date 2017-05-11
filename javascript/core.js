@@ -241,7 +241,7 @@ $(document).ready(function () {
 
     $('#helplink').click(function () {
         chrome.tabs.create({
-            url: "https://chrome.google.com/extensions/detail/daolbddjeaipeiglbbpmlhldimjmgenm?hl=en-US"
+            url: "https://chrome.google.com/extensions/detail/beoinfnicondcdidhmoaiaehnmaebkfk?hl=en-US"
         });
     });
 
