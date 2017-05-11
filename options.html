@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nyaa Torrents Extension Options</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<link rel="stylesheet" href="css/flick/jquery-ui-1.8.10.custom.css" type="text/css">
+<style type="text/css">
+
+* {
+	font-family: Helvetica, Arial, sans-serif;
+
+}
+
+#content {
+	position: absolute;
+	width: 980px;
+	height: 654px;
+	
+	left: 50%;
+	top: 25%;
+	margin-left: -490px;
+	margin-top: -150px;
+	border: 1px solid #000000;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	-webkit-box-shadow:2px 2px 4px #333333;
+}
+
+
+
+
+#header {
+
+	top: 0px;
+	left: 0px;
+	
+	height: 50px;
+	line-height: 50px;
+	font-size: 200%;
+	font-weight: bold;
+	background-color: #ffffff;
+	text-align: left;
+	margin-bottom: 5px;
+	line-height: 50px;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-topleft: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgb(89,157,140)), color-stop(0.7, rgb(255,255,255)));
+}
+
+#header > img {
+	margin: 1px;
+	padding: 0px;
+	border: 0px none;
+	vertical-align: middle;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-topleft: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+
+
+.setting {
+	position: relative;
+	width: 100%;
+	background-color: #eeeeee;
+	margin: 0px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	height: 20px;
+}
+
+
+#settings {
+	height: 98%;
+	width: 98%;
+	margin: 1%;
+	
+	padding: 0px;
+}
+
+#settings fieldset {
+	margin: 0px;
+	padding: 2px;
+	border: 0px none;
+}
+
+
+#settings label {
+	width: 29%;
+	padding: 0px;
+	padding-left: 3px;
+	padding-right: 0px;
+	margin: 10px 0;
+	padding: 0;
+	text-align: right;
+	float: left;
+	height: 32px;
+	line-height: 32px;
+
+}
+
+
+
+#settings select, #settings input {
+	width: 70%;
+	float: right;
+	height: 32px;
+	margin: 10px 0;
+	padding: 0;
+
+}
+
+
+#controls {
+	position: absolute;
+	right: 5px;
+	height: 32px;
+	bottom: 0px;
+	
+	
+	text-align: center;
+}
+
+#status {
+	position: fixed;
+	left: 50%;
+	top: 0px;
+	width: 200px;
+	margin-left: -100px;
+	display: none;
+}
+
+.inputContainer label {
+	float: left;
+	width: 30%;
+	height: 26px;
+	line-height: 26px;
+	margin: 5px 0;
+}
+
+.inputContainer input, .inputContainer select, .inputContainer textarea {
+	float: right;
+	width: 70%;
+	height: 26px;
+	margin: 5px 0;
+}
+
+#license {
+	white-space: pre;
+	font-family: Georgia;
+	height: 300px;
+	overflow: auto;
+	border: 1px solid transparent;
+}
+
+#license:hover {
+	border: 1px solid #666666;
+}
+
+.fulltab {
+	height: 98%;
+	display: block;
+}
+
+#version {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	font-size: 80%;
+}
+
+</style>
+<script src="javascript/jquery.min.js" type="text/javascript"></script>
+<script src="javascript/jquery-ui-1.8.10.custom.min.js" type="text/javascript"></script>
+<script src="javascript/options.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="status"></div>
+
+<!--
+<div id="content">
+<div id="header"><img src="images/icon-64x64.png"> Nyaa Pantsu Latest Anime Options</div>
+-->
+<form id="settings">
+
+<div id="content">
+<div id="header"><img src="images/icon-64x64.png"> Nyaa Pantsu Latest Anime Options</div>
+<div id="tabs">
+
+	<ul>
+		<li><a href="#tabs-1">Appearance</a></li>
+		<li><a href="#tabs-2">Network</a></li>
+		<li><a href="#tabs-3">About</a></li>
+	</ul>
+	<div id="tabs-1" class="fulltab">
+		<fieldset>
+			<div class="inputContainer">
+			<label for="genre">Display Genre</label>
+			<select id="genre">
+				<option value="_">Toutes les catégories</option>
+                <option value="3_">Anime</option>
+                <option value="3_12">Anime - Vidéoclip d'anime (AMV)</option>
+                <option value="3_5">Anime - Traduit en anglais</option>
+                <option value="3_13">Anime - Traduit dans d'autres langues</option>
+                <option value="3_6">Anime - Raw</option>
+                <option value="2_">Audio</option>
+                <option value="2_3">Audio - Sans perte (Lossless)</option>
+                <option value="2_4">Audio - Avec perte (Lossy)</option>
+                <option value="4_">Littérature</option>
+                <option value="4_7">Littérature - Traduit en anglais</option>
+                <option value="4_8">Littérature - Raw</option>
+                <option value="4_14">Littérature - Traduit dans d'autres langues</option>
+                <option value="5_">Live Action</option>
+                <option value="5_9">Live Action - Traduit en anglais</option>
+                <option value="5_10">Live Action - Idole/Vidéo promotionnelle</option>
+                <option value="5_18">Live Action - Traduit dans d'autres langues</option>
+                <option value="5_11">Live Action - Raw</option>
+                <option value="6_">Images</option>
+                <option value="6_15">Images - Design graphique</option>
+                <option value="6_16">Images - Photos</option>
+                <option value="1_">Logiciels</option>
+                <option value="1_1">Logiciels - Applications</option>
+                <option value="1_2">Logiciels - Jeux</option>
+			</select>
+			</div>
+		<div class="inputContainer">
+		<label for="maxresults">Max results</label>
+		<select id="maxresults">
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="25">25</option>
+			<option value="50">50</option>
+		</select>
+		</div>
+		
+		<div class="inputContainer">
+		<label for="theme">Theme</label>
+		<select id="theme">
+			<option value="grey">Grey</option>
+			<option value="teal">Teal</option>
+			<option value="red">Red</option>
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+			<option value="sunrise">Sunrise</option>
+			<option value="chromed">Chromed</option>
+			<option value="midnight">Midnight</option>
+			<option value="eclipse">Eclipse</option>
+			<option value="nouveauteal">Nouveau Teal</option>
+			<option value="nouveaublue">Nouveau Blue</option>	
+			<option value="nouveauemerald">Nouveau Emerald</option>
+		</select>
+		</div>
+		
+
+		
+		<div class="inputContainer">
+		<label for="newstyle">Use "new" styles:</label>
+		<select id="newstyle">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select>
+		</div>
+
+		<div class="inputContainer">
+		<label for="hideothers">Hide others on click:</label>
+		<select id="hideothers">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select>
+		</div>
+		
+		<div class="inputContainer">
+		<label for="showcountdown">Show update countdown icon:</label>
+		<select id="showcountdown">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select>
+		</div>
+		
+		<div class="inputContainer">
+		<label for="show_search_loader">Show searching animation:</label>
+		<select id="show_search_loader">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select>
+		</div>
+
+		<div class="inputContainer">
+		<label for="auto_close_tab">Auto-close blank tab:</label>
+		<select id="auto_close_tab">
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select>
+		</div>
+		
+		
+		<div class="inputContainer">
+		<label for="searchresults">Show search results</label>
+		<select id="searchresults">
+			<option value="inside">inside the extension</option>
+			<option value="outside">outside the extension</option>
+		</select>
+		</div>
+	
+		
+		</fieldset>	
+		
+		
+	</div>
+	<div id="tabs-2" class="fulltab">
+		<fieldset>
+		<div class="inputContainer">
+		<label for="refreshinterval">Refresh data every</label>
+		<select id="refreshinterval">
+			<option value="5">5 minutes</option>
+			<option value="10">10 minutes</option>
+			<option value="15">15 minutes</option>
+			<option value="30">30 minutes</option>
+			<option value="60">hour</option>
+			<option value="120">2 hours</option>
+			<option value="240">4 hours</option>
+		</select>
+		</div>
+		</fieldset>
+	</div>
+	<div id="tabs-3" class="fulltab">
+		<p>Nyaa Pantsu Latest Anime &copy 2017-<span id='dateAuj'></span> Nyaa Pantsu</p>
+		<h1>License</h1>
+		<div id="license">Copyright (c) 2017 Nyaa Pantsu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</div>
+	</div>
+
+
+</div>
+
+	<div id="controls">
+		<button id="saveButton">Save</button>
+		<button id="closeButton">Close</button>
+		<button id="clearButton">Clear</button>
+	</div>
+
+</form>
+
+</div>
+<div id="version"></div>
+</body>
+</html>
