@@ -61,7 +61,7 @@ function update() {
     var catid = genre_array[0];
     var subcatid = genre_array[1];
 	
-	req.open("GET", "http://nyaa.pantsu.cat/feed" + "?c=" + catid + "_" + subcatid, true);
+	req.open("GET", "https://nyaa.pantsu.cat/feed" + "?c=" + catid + "_" + subcatid, true);
     req.send(null);
 	
 	

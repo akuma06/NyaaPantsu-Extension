@@ -203,14 +203,14 @@ $(document).ready(function () {
 		//searchterms = localStorage["search_terms"];
 		if (localStorage["search_results"] == "inside") {
 			if (localStorage["show_search_loader"] == "yes") $('#loader').fadeIn();
-			search.open("GET", "http://nyaa.pantsu.cat/feed?" + "c=" + catid + "_" + subcatid + "&q=" + $('#searchbox').val(), true);
+			search.open("GET", "https://nyaa.pantsu.cat/feed?" + "c=" + catid + "_" + subcatid + "&q=" + $('#searchbox').val(), true);
 			$('#searchbox').val("");
 			$("#searchbox").autocomplete({
 				source: searchterms
 			});
 			search.send(null);
 		} else {
-			chrome.tabs.create({url: "http://nyaa.pantsu.cat/search?c=" + localStorage["default_genre"] + "&s=0&q=" + $('#searchbox').val()});
+			chrome.tabs.create({url: "https://nyaa.pantsu.cat/search?c=" + localStorage["default_genre"] + "&s=0&q=" + $('#searchbox').val()});
 		}
     });
 
@@ -225,7 +225,7 @@ $(document).ready(function () {
 			//searchterms = localStorage["search_terms"];
 			if (localStorage["search_results"] == "inside") {
 				if (localStorage["show_search_loader"] == "yes") $('#loader').fadeIn();
-				search.open("GET", "http://nyaa.pantsu.cat/feed?" + "c=" + catid + "_" + subcatid + "&q=" + $('#searchbox').val(), true);
+				search.open("GET", "https://nyaa.pantsu.cat/feed?" + "c=" + catid + "_" + subcatid + "&q=" + $('#searchbox').val(), true);
 				$('#searchbox').val("");
 				$("#searchbox").autocomplete({
 					source: searchterms
@@ -233,7 +233,7 @@ $(document).ready(function () {
 				search.send(null);
 				
 			} else {
-				chrome.tabs.create({url: "http://nyaa.pantsu.cat/search?c=" + localStorage["default_genre"] + "&s=0&q=" + $('#searchbox').val()});
+				chrome.tabs.create({url: "https://nyaa.pantsu.cat/search?c=" + localStorage["default_genre"] + "&s=0&q=" + $('#searchbox').val()});
 			}
 			
         }
@@ -253,7 +253,7 @@ $(document).ready(function () {
 
     $('#homelink').click(function () {
         chrome.tabs.create({
-            url: "http://nyaa.pantsu.cat/"
+            url: "https://nyaa.pantsu.cat/"
         });
     });
 
