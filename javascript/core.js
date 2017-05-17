@@ -184,15 +184,6 @@ $(document).ready(function () {
 		$("#searchbox").autocomplete({
 			source: searchterms
 		});
-	
-	
-	
-	
-	search.onload = process_search;
-	process_response();
-	
-	$('#content').addClass(theme + "bg");
-
     $('#searchbutton').click(function () {
 			if (localStorage["search_terms"] == undefined || localStorage["search_terms"] == "") {
 				localStorage["search_terms"] = $('#searchbox').val();
@@ -268,6 +259,15 @@ $(document).ready(function () {
         }, 500);
         $(this).children('#dropdownarrow').stop().fadeTo(500, 1.0);
     });
+	
+	
+	
+	
+	search.onload = process_search;
+	process_response();
+	
+	$('#content').addClass(theme + "bg");
+
 	
 	$('#refresh').click(function(){
 		process_response();
