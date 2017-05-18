@@ -41,14 +41,14 @@ function process_response() {
 			var dates = items[i].getElementsByTagName("pubDate");
 
 			var desc = (descriptions[0].childNodes.length === 0 ? "" : descriptions[0].childNodes[0].nodeValue);
-			var title = titles[0].innerHTML;
-			var link = links[0].innerHTML;
-			var date = dates[0].innerHTML;
+			var title = titles[0].textContent;
+			var link = links[0].textContent;
+			var date = dates[0].textContent;
 
-			$('#news' + i).children('.blockheader').children('.blocktitle').html(title);
+			$('#news' + i).children('.blockheader').children('.blocktitle').text(title);
 			$('#news' + i).children('.blockheader').children('.blocklink').html('<a href="' + link + '">' + '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="' + theme + 'arrow"><path d="M32,16.016l-5.672-5.664c0,0-3.18,3.18-6.312,6.312V0h-8.023v16.664l-6.32-6.32L0,16.016L16,32	L32,16.016z"/></svg>' + '</a>');
 			$('#news' + i).children('.blockcontent').html(desc);
-			$('#news' + i).children('.blockfooter').html(date);
+			$('#news' + i).children('.blockfooter').text(date);
 			$('#news' + i).fadeIn();
 			$('#news' + i).children('.blockheader').fadeIn();
 		}
@@ -107,15 +107,15 @@ function process_search() {
 			var dates = items[i].getElementsByTagName("pubDate");
             
 			var desc = (descriptions[0].childNodes.length === 0 ? "" : descriptions[0].childNodes[0].nodeValue);
-			var title = titles[0].innerHTML;
-			var link = links[0].innerHTML;
-			var date = dates[0].innerHTML;
+			var title = titles[0].textContent;
+			var link = links[0].textContent;
+			var date = dates[0].textContent;
 
-			$('#news' + i).children('.blockheader').children('.blocktitle').html(title);
+			$('#news' + i).children('.blockheader').children('.blocktitle').text(title);
 			$('#news' + i).children('.blockheader').children('.blocklink').html('<a href="' + link + '">' + '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="' + theme + 'arrow"><path class="arrowpath" d="M32,16.016l-5.672-5.664c0,0-3.18,3.18-6.312,6.312V0h-8.023v16.664l-6.32-6.32L0,16.016L16,32	L32,16.016z"/></svg>' + '</a>');
 			$('#news' + i).children('.blockheader').fadeIn();
 			$('#news' + i).children('.blockcontent').html(desc);
-			$('#news' + i).children('.blockfooter').html(date);
+			$('#news' + i).children('.blockfooter').text(date);
 		}
 	} catch(e) {
 		alert(e.message);
