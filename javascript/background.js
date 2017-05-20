@@ -67,7 +67,7 @@ function update() {
 	
 	iCountdown = parseInt(localStorage["refresh_interval"]);
 	clearInterval(tNext);
-	tNext = setInterval ("countdown()", 60000);
+	tNext = setInterval (countdown, 60000);
 	countdown();
 	
 }
@@ -98,5 +98,7 @@ function reset_timeout() {
 }
 
 function clear_tab(tabid, delay) {	
-	setTimeout("chrome.tabs.remove(" + tabid + ")", delay);
+	setTimeout(() => {
+        chrome.tabs.remove( tabid )
+    }, delay);
 }

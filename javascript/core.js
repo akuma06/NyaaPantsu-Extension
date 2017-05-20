@@ -143,7 +143,12 @@ function activate_effects() {
 	
     $('.blocklink').click(function () {
 		var oldtabid = 0;
-		chrome.tabs.getSelected(null, function(tab){
+		chrome.tabs.query({
+            active: true,
+            lastFocusedWindow: true
+        }, function(tabs) {
+            // and use that tab to fill in out title and url
+            var tab = tabs[0];
 			oldtabid = tab.id;
 		});
 		
