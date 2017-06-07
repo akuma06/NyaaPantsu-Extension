@@ -1,0 +1,178 @@
+{
+    "all_categories": {
+        "message": "Toutes les catégories"
+    },
+    
+    "select_a_torrent_category": {
+        "message": "Selectionner une catégorie"
+    },
+    
+    "anime": {
+        "message": "Anime"
+    },
+    
+    "anime_amv": {
+        "message": "Anime - Vidéoclip d'anime (AMV)"
+    },
+    
+    "anime_english_translated": {
+        "message": "Anime - Traduit en anglais"
+    },
+    
+    "anime_non_english_translated": {
+        "message": "Anime - Traduit dans d'autres langues"
+    },
+    
+    "anime_raw": {
+        "message": "Anime - Raw"
+    },
+    
+    "audio": {
+        "message": "Audio"
+    },
+    
+    "audio_lossless": {
+        "message": "Audio - Sans perte (Lossless)"
+    },
+    
+    "audio_lossy": {
+        "message": "Audio - Avec perte (Lossy)"
+    },
+    
+    "literature": {
+        "message": "Littérature"
+    },
+    
+    "literature_english_translated": {
+        "message": "Littérature - Traduit en anglais"
+    },
+    
+    "literature_raw": {
+        "message": "Littérature - Raw"
+    },
+    
+    "literature_non_english_translated": {
+        "message": "Littérature - Traduit dans d'autres langues"
+    },
+    
+    "live_action": {
+        "message": "Live Action"
+    },
+    
+    "live_action_english_translated": {
+        "message": "Live Action - Traduit en anglais"
+    },
+    
+    "live_action_idol_pv": {
+        "message": "Live Action - Idole/Vidéo promotionnelle"
+    },
+    
+    "live_action_non_english_translated": {
+        "message": "Live Action - Traduit dans d'autres langues"
+    },
+    
+    "live_action_raw": {
+        "message": "Live Action - Raw"
+    },
+    
+    "pictures": {
+        "message": "Images"
+    },
+    
+    "pictures_graphics": {
+        "message": "Images - Créations"
+    },
+    
+    "pictures_photos": {
+        "message": "Images - Photographies"
+    },
+    
+    "software": {
+        "message": "Logiciels"
+    },
+    
+    "software_applications": {
+        "message": "Logiciels - Applications"
+    },
+    
+    "software_games": {
+        "message": "Logiciels - Jeux"
+    },
+    
+    "max_results": {
+        "message": "Resultats Maximum"
+    },
+    "theme_select": {
+        "message": "Selectionner un thème"
+    },
+    "use_new_styles": {
+        "message": "Utiliser les \"nouveaux\" styles :"
+    },
+    "yes":{
+        "message": "Oui"
+    },
+    "no": {
+        "message": "Non"
+    },
+    "hide_others": {
+        "message": "Cacher les autres après un clique :"
+    },
+    "show_countdown": {
+        "message": "Montrer l'icône de compte-à-rebours :"
+    },
+    "show_search_anim": {
+        "message": "Montrer l'animation de recherche :"
+    },
+    "auto_close": {
+        "message": "Fermer automatiquement les onglets vides :"
+    },
+    "show_search_results": {
+        "message": "Montrer les résultats de recherches"
+    },
+    "inside": {
+        "message": "dans l'extension"
+    },
+    "outside": {
+        "message": "dans un nouvel onglet"
+    },
+    "refresh_every": {
+        "message": "Rafraîchir les données tout les "
+    },
+    "minutes": {
+        "message": "$MIN$ minutes",
+        "placeholders": {
+            "min": {
+                "content": "$1"
+            }
+        }
+    },
+    "hour": {
+        "message": "1 heure"
+    },
+    "hours": {
+        "message": "$HOUR$ heures",
+        "placeholders": {
+            "hour": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_changes": {
+        "message": "Sauvegarder"
+    },
+    "close": {
+        "message": "Fermer"
+    },
+    "reset": {
+        "message": "Effacer"
+    },
+    "appearance": {
+        "message": "Apparance"
+    }, 
+    "network": {
+        "message": "Réseau"
+    },
+    "about": {
+        "message": "A propos"
+    }
+}

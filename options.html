@@ -23,7 +23,7 @@
 	border: 1px solid #000000;
 	border-top-right-radius: 8px;
 	border-top-left-radius: 8px;
-	-webkit-box-shadow:2px 2px 4px #333333;
+	box-shadow:2px 2px 4px #333333;
 }
 
 
@@ -42,13 +42,9 @@
 	text-align: left;
 	margin-bottom: 5px;
 	line-height: 50px;
-	-webkit-border-top-right-radius: 8px;
-	-webkit-border-top-left-radius: 8px;
-	-moz-border-radius-topright: 8px;
-	-moz-border-radius-topleft: 8px;
 	border-top-right-radius: 8px;
 	border-top-left-radius: 8px;
-	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgb(89,157,140)), color-stop(0.7, rgb(255,255,255)));
+	background-image: linear-gradient(to left top, rgb(89,157,140) 0, rgb(255,255,255) 70%);
 }
 
 #header > img {
@@ -56,10 +52,6 @@
 	padding: 0px;
 	border: 0px none;
 	vertical-align: middle;
-	-webkit-border-top-right-radius: 8px;
-	-webkit-border-top-left-radius: 8px;
-	-moz-border-radius-topright: 8px;
-	-moz-border-radius-topleft: 8px;
 	border-top-right-radius: 8px;
 	border-top-left-radius: 8px;
 }
@@ -194,43 +186,43 @@
 <div id="tabs">
 
 	<ul>
-		<li><a href="#tabs-1">Appearance</a></li>
-		<li><a href="#tabs-2">Network</a></li>
-		<li><a href="#tabs-3">About</a></li>
+		<li><a href="#tabs-1" data-translate="true">__MSG_appearance__</a></li>
+		<li><a href="#tabs-2" data-translate="true">__MSG_network__</a></li>
+		<li><a href="#tabs-3" data-translate="true">__MSG_about__</a></li>
 	</ul>
 	<div id="tabs-1" class="fulltab">
 		<fieldset>
 			<div class="inputContainer">
-			<label for="genre">Display Genre</label>
+			<label for="genre" data-translate="true">__MSG_select_a_torrent_category__</label>
 			<select id="genre">
-				<option value="_">Toutes les catégories</option>
-                <option value="3_">Anime</option>
-                <option value="3_12">Anime - Vidéoclip d'anime (AMV)</option>
-                <option value="3_5">Anime - Traduit en anglais</option>
-                <option value="3_13">Anime - Traduit dans d'autres langues</option>
-                <option value="3_6">Anime - Raw</option>
-                <option value="2_">Audio</option>
-                <option value="2_3">Audio - Sans perte (Lossless)</option>
-                <option value="2_4">Audio - Avec perte (Lossy)</option>
-                <option value="4_">Littérature</option>
-                <option value="4_7">Littérature - Traduit en anglais</option>
-                <option value="4_8">Littérature - Raw</option>
-                <option value="4_14">Littérature - Traduit dans d'autres langues</option>
-                <option value="5_">Live Action</option>
-                <option value="5_9">Live Action - Traduit en anglais</option>
-                <option value="5_10">Live Action - Idole/Vidéo promotionnelle</option>
-                <option value="5_18">Live Action - Traduit dans d'autres langues</option>
-                <option value="5_11">Live Action - Raw</option>
-                <option value="6_">Images</option>
-                <option value="6_15">Images - Design graphique</option>
-                <option value="6_16">Images - Photos</option>
-                <option value="1_">Logiciels</option>
-                <option value="1_1">Logiciels - Applications</option>
-                <option value="1_2">Logiciels - Jeux</option>
+				<option value="_" data-translate="true">__MSG_all_categories__</option>
+                <option value="3_" data-translate="true">__MSG_anime__</option>
+                <option value="3_12" data-translate="true">__MSG_anime_amv__</option>
+                <option value="3_5" data-translate="true">__MSG_anime_english_translated__</option>
+                <option value="3_13" data-translate="true">__MSG_anime_non_english_translated__</option>
+                <option value="3_6" data-translate="true">__MSG_anime_raw__</option>
+                <option value="2_" data-translate="true">__MSG_audio__</option>
+                <option value="2_3" data-translate="true">__MSG_audio_lossless__</option>
+                <option value="2_4" data-translate="true">__MSG_audio_lossy__</option>
+                <option value="4_" data-translate="true">__MSG_literature__</option>
+                <option value="4_7" data-translate="true">__MSG_literature_english_translated__</option>
+                <option value="4_8" data-translate="true">__MSG_literature_raw__</option>
+                <option value="4_14" data-translate="true">__MSG_literature_non_english_translated__</option>
+                <option value="5_" data-translate="true">__MSG_live_action__</option>
+                <option value="5_9" data-translate="true">__MSG_live_action_english_translated__</option>
+                <option value="5_10" data-translate="true">__MSG_live_action_idol_pv__</option>
+                <option value="5_18" data-translate="true">__MSG_live_action_non_english_translated__</option>
+                <option value="5_11" data-translate="true">__MSG_live_action_raw__</option>
+                <option value="6_" data-translate="true">__MSG_pictures__</option>
+                <option value="6_15" data-translate="true">__MSG_pictures_graphics__</option>
+                <option value="6_16" data-translate="true">__MSG_pictures_photos__</option>
+                <option value="1_" data-translate="true">__MSG_software__</option>
+                <option value="1_1" data-translate="true">__MSG_software_applications__</option>
+                <option value="1_2" data-translate="true">__MSG_software_games__</option>
 			</select>
 			</div>
 		<div class="inputContainer">
-		<label for="maxresults">Max results</label>
+		<label for="maxresults" data-translate="true">__MSG_max_results__</label>
 		<select id="maxresults">
 			<option value="5">5</option>
 			<option value="10">10</option>
@@ -240,7 +232,7 @@
 		</div>
 		
 		<div class="inputContainer">
-		<label for="theme">Theme</label>
+		<label for="theme" data-translate="true">__MSG_theme_select__</label>
 		<select id="theme">
 			<option value="grey">Grey</option>
 			<option value="teal">Teal</option>
@@ -251,60 +243,60 @@
 			<option value="chromed">Chromed</option>
 			<option value="midnight">Midnight</option>
 			<option value="eclipse">Eclipse</option>
-			<option value="nouveauteal">Nouveau Teal</option>
-			<option value="nouveaublue">Nouveau Blue</option>	
-			<option value="nouveauemerald">Nouveau Emerald</option>
+			<option value="nouveauteal">New Teal</option>
+			<option value="nouveaublue">New Blue</option>	
+			<option value="nouveauemerald">New Emerald</option>
 		</select>
 		</div>
 		
 
 		
 		<div class="inputContainer">
-		<label for="newstyle">Use "new" styles:</label>
+		<label for="newstyle" data-translate="true">__MSG_use_new_styles__</label>
 		<select id="newstyle">
-			<option value="yes">Yes</option>
-			<option value="no">No</option>
+			<option value="yes" data-translate="true">__MSG_yes__</option>
+			<option value="no" data-translate="true">__MSG_no__</option>
 		</select>
 		</div>
 
 		<div class="inputContainer">
-		<label for="hideothers">Hide others on click:</label>
+		<label for="hideothers" data-translate="true">__MSG_hide_others__</label>
 		<select id="hideothers">
-			<option value="yes">Yes</option>
-			<option value="no">No</option>
+			<option value="yes" data-translate="true">__MSG_yes__</option>
+			<option value="no" data-translate="true">__MSG_no__</option>
 		</select>
 		</div>
 		
 		<div class="inputContainer">
-		<label for="showcountdown">Show update countdown icon:</label>
+		<label for="showcountdown" data-translate="true">__MSG_show_countdown__</label>
 		<select id="showcountdown">
-			<option value="yes">Yes</option>
-			<option value="no">No</option>
+			<option value="yes" data-translate="true">__MSG_yes__</option>
+			<option value="no" data-translate="true">__MSG_no__</option>
 		</select>
 		</div>
 		
 		<div class="inputContainer">
-		<label for="show_search_loader">Show searching animation:</label>
+		<label for="show_search_loader" data-translate="true">__MSG_show_search_anim__</label>
 		<select id="show_search_loader">
-			<option value="yes">Yes</option>
-			<option value="no">No</option>
+			<option value="yes" data-translate="true">__MSG_yes__</option>
+			<option value="no" data-translate="true">__MSG_no__</option>
 		</select>
 		</div>
 
 		<div class="inputContainer">
-		<label for="auto_close_tab">Auto-close blank tab:</label>
+		<label for="auto_close_tab" data-translate="true">__MSG_auto_close__</label>
 		<select id="auto_close_tab">
-			<option value="yes">Yes</option>
-			<option value="no">No</option>
+			<option value="yes" data-translate="true">__MSG_yes__</option>
+			<option value="no" data-translate="true">__MSG_no__</option>
 		</select>
 		</div>
 		
 		
 		<div class="inputContainer">
-		<label for="searchresults">Show search results</label>
+		<label for="searchresults" data-translate="true">__MSG_show_search_results__</label>
 		<select id="searchresults">
-			<option value="inside">inside the extension</option>
-			<option value="outside">outside the extension</option>
+			<option value="inside" data-translate="true">__MSG_inside__</option>
+			<option value="outside" data-translate="true">__MSG_outside__</option>
 		</select>
 		</div>
 	
@@ -316,15 +308,15 @@
 	<div id="tabs-2" class="fulltab">
 		<fieldset>
 		<div class="inputContainer">
-		<label for="refreshinterval">Refresh data every</label>
+		<label for="refreshinterval" data-translate="true">__MSG_refresh_every__</label>
 		<select id="refreshinterval">
-			<option value="5">5 minutes</option>
-			<option value="10">10 minutes</option>
-			<option value="15">15 minutes</option>
-			<option value="30">30 minutes</option>
-			<option value="60">hour</option>
-			<option value="120">2 hours</option>
-			<option value="240">4 hours</option>
+			<option value="5" data-translate="true" data-translate-arg="5">__MSG_minutes__</option>
+			<option value="10" data-translate="true" data-translate-arg="10">__MSG_minutes__</option>
+			<option value="15" data-translate="true" data-translate-arg="15">__MSG_minutes__</option>
+			<option value="30" data-translate="true" data-translate-arg="30">__MSG_minutes__</option>
+			<option value="60" data-translate="true">__MSG_hour__</option>
+			<option value="120" data-translate="true" data-translate-arg="2">__MSG_hours__</option>
+			<option value="240" data-translate="true" data-translate-arg="4">__MSG_hours__</option>
 		</select>
 		</div>
 		</fieldset>
@@ -357,9 +349,9 @@ THE SOFTWARE.</div>
 </div>
 
 	<div id="controls">
-		<button id="saveButton">Save</button>
-		<button id="closeButton">Close</button>
-		<button id="clearButton">Clear</button>
+		<button id="saveButton" data-translate="true">__MSG_save_changes__</button>
+		<button id="closeButton" data-translate="true">__MSG_close__</button>
+		<button id="clearButton" data-translate="true">__MSG_reset__</button>
 	</div>
 
 </form>

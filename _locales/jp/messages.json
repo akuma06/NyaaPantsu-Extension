@@ -1,0 +1,116 @@
+{
+    "all_categories": {
+        "message": "すべてのカテゴリー"
+    },
+    
+    "select_a_torrent_category": {
+        "message": "-- Torrent カテゴリーを選択 --"
+    },
+    
+    "anime": {
+        "message": "アニメ"
+    },
+    
+    "anime_amv": {
+        "message": "アニメ ‐ AMV"
+    },
+    
+    "anime_english_translated": {
+        "message": "アニメ ‐ 英訳済み"
+    },
+    
+    "anime_non_english_translated": {
+        "message": "アニメ ‐ 未英訳"
+    },
+    
+    "anime_raw": {
+        "message": "アニメ ‐ RAW"
+    },
+    
+    "audio": {
+        "message": "オーディオ"
+    },
+    
+    "audio_lossless": {
+        "message": "オーディオ ‐ 可逆圧縮"
+    },
+    
+    "audio_lossy": {
+        "message": "オーディオ ‐ 非可逆圧縮"
+    },
+    
+    "literature": {
+        "message": "書籍"
+    },
+    
+    "literature_english_translated": {
+        "message": "書籍 ‐ 英訳済み"
+    },
+    
+    "literature_raw": {
+        "message": "書籍 ‐ RAW"
+    },
+    
+    "literature_non_english_translated": {
+        "message": "書籍 ‐ 未英訳"
+    },
+    
+    "live_action": {
+        "message": "実写"
+    },
+    
+    "live_action_english_translated": {
+        "message": "実写 ‐ 英訳済み"
+    },
+    
+    "live_action_idol_pv": {
+        "message": "実写 ‐ アイドル / PV"
+    },
+    
+    "live_action_non_english_translated": {
+        "message": "実写 ‐ 未英訳"
+    },
+    
+    "live_action_raw": {
+        "message": "実写 ‐ RAW"
+    },
+    
+    "pictures": {
+        "message": "画像"
+    },
+    
+    "pictures_graphics": {
+        "message": "画像 ‐ グラフィック"
+    },
+    
+    "pictures_photos": {
+        "message": "画像 ‐ 写真"
+    },
+    
+    "software": {
+        "message": "ソフトウェア"
+    },
+    
+    "software_applications": {
+        "message": "ソフトウェア ‐ アプリ"
+    },
+    
+    "software_games": {
+        "message": "ソフトウェア ‐ ゲーム"
+    },
+
+    "theme_select": {
+        "message": "-- テーマを選択 --"
+    },
+
+    "yes":{
+        "message": "はい"
+    },
+    "no": {
+        "message": "いいえ"
+    },
+
+    "save_changes": {
+        "message": "変更を保存"
+    }
+}

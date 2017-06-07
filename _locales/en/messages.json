@@ -1,0 +1,214 @@
+{
+    "all_categories": {
+        "message": "All categories"
+    },
+    
+    "select_a_torrent_category": {
+        "message": "Select a Torrent Category"
+    },
+    
+    "anime": {
+        "message": "Anime"
+    },
+    
+    "anime_amv": {
+        "message": "Anime - Anime Music Video"
+    },
+    
+    "anime_english_translated": {
+        "message": "Anime - English-translated"
+    },
+    
+    "anime_non_english_translated": {
+        "message": "Anime - Non-English-translated"
+    },
+    
+    "anime_raw": {
+        "message": "Anime - Raw"
+    },
+    
+    "audio": {
+        "message": "Audio"
+    },
+    
+    "audio_lossless": {
+        "message": "Audio - Lossless"
+    },
+    
+    "audio_lossy": {
+        "message": "Audio - Lossy"
+    },
+    
+    "literature": {
+        "message": "Literature"
+    },
+    
+    "literature_english_translated": {
+        "message": "Literature - English-translated"
+    },
+    
+    "literature_raw": {
+        "message": "Literature - Raw"
+    },
+    
+    "literature_non_english_translated": {
+        "message": "Literature - Non-English-translated"
+    },
+    
+    "live_action": {
+        "message": "Live Action"
+    },
+    
+    "live_action_english_translated": {
+        "message": "Live Action - English-translated"
+    },
+    
+    "live_action_idol_pv": {
+        "message": "Live Action - Idol/Promotional Video"
+    },
+    
+    "live_action_non_english_translated": {
+        "message": "Live Action - Non-English-translated"
+    },
+    
+    "live_action_raw": {
+        "message": "Live Action - Raw"
+    },
+    
+    "pictures": {
+        "message": "Pictures"
+    },
+    
+    "pictures_graphics": {
+        "message": "Pictures - Graphics"
+    },
+    
+    "pictures_photos": {
+        "message": "Pictures - Photos"
+    },
+    
+    "software": {
+        "message": "Software"
+    },
+    
+    "software_applications": {
+        "message": "Software - Applications"
+    },
+    
+    "software_games": {
+        "message": "Software - Games"
+    },
+    
+    "art": {
+        "message": "Art"
+    },
+    
+    "art_anime": {
+        "message": "Art - Anime"
+    },
+    
+    "art_doujinshi": {
+        "message": "Art - Doujinshi"
+    },
+    
+    "art_games": {
+        "message": "Art - Games"
+    },
+    
+    "art_manga": {
+        "message": "Art - Manga"
+    },
+    
+    "art_pictures": {
+        "message": "Art - Pictures"
+    },
+    
+    "real_life": {
+        "message": "Real Life"
+    },
+    
+    "real_life_photobooks_and_pictures": {
+        "message": "Real Life - Photobooks and Pictures"
+    },
+    
+    "real_life_videos": {
+        "message": "Real Life - Videos"
+    },
+
+    "max_results": {
+        "message": "Max Results"
+    },
+    "theme_select": {
+        "message": "Select a Theme"
+    },
+    "use_new_styles": {
+        "message": "Use \"new\" styles:"
+    },
+    "yes":{
+        "message": "Yes"
+    },
+    "no": {
+        "message": "No"
+    },
+    "hide_others": {
+        "message": "Hide others on click:"
+    },
+    "show_countdown": {
+        "message": "Show update countdown icon:"
+    },
+    "show_search_anim": {
+        "message": "Show searching animation:"
+    },
+    "auto_close": {
+        "message": "Auto-close blank tab:"
+    },
+    "show_search_results": {
+        "message": "Show search results"
+    },
+    "inside": {
+        "message": "inside the extension"
+    },
+    "outside": {
+        "message": "outside the extension"
+    },
+    "refresh_every": {
+        "message": "Refresh data every"
+    },
+    "minutes": {
+        "message": "$MIN$ minutes",
+        "placeholders": {
+            "min": {
+                "content": "$1"
+            }
+        }
+    },
+    "hour": {
+        "message": "1 hour"
+    },
+    "hours": {
+        "message": "$HOUR$ hours",
+        "placeholders": {
+            "hour": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_changes": {
+        "message": "Save Changes"
+    },
+    "close": {
+        "message": "Close"
+    },
+    "reset": {
+        "message": "Reset"
+    },
+    "appearance": {
+        "message": "Appearance"
+    }, 
+    "network": {
+        "message": "Network"
+    },
+    "about": {
+        "message": "About"
+    }
+}

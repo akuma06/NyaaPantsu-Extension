@@ -1,0 +1,120 @@
+{
+    "all_categories": {
+        "message": "Todas las Categorías"
+    },
+    
+    "select_a_torrent_category": {
+        "message": "Selecciona una Categoría"
+    },
+    
+    "anime": {
+        "message": "Anime"
+    },
+    
+    "anime_amv": {
+        "message": "Anime - Anime Music Video"
+    },
+    
+    "anime_english_translated": {
+        "message": "Anime - Traducido al Inglés"
+    },
+    
+    "anime_non_english_translated": {
+        "message": "Anime - Traducido a un idioma distinto del Inglés"
+    },
+    
+    "anime_raw": {
+        "message": "Anime - Raw"
+    },
+    
+    "audio": {
+        "message": "Audio"
+    },
+    
+    "audio_lossless": {
+        "message": "Audio - Sin Pérdida"
+    },
+    
+    "audio_lossy": {
+        "message": "Audio - Con Pérdida"
+    },
+    
+    "literature": {
+        "message": "Literatura"
+    },
+    
+    "literature_english_translated": {
+        "message": "Literatura - Traducida al Inglés"
+    },
+    
+    "literature_raw": {
+        "message": "Literatura - Raw"
+    },
+    
+    "literature_non_english_translated": {
+        "message": "Literatura - Traducida a un idioma distinto del Inglés"
+    },
+    
+    "live_action": {
+        "message": "Live Action"
+    },
+    
+    "live_action_english_translated": {
+        "message": "Live Action - Traducido al Inglés"
+    },
+    
+    "live_action_idol_pv": {
+        "message": "Live Action - Idol/Video Promocional"
+    },
+    
+    "live_action_non_english_translated": {
+        "message": "Live Action - Traducido a un idioma distinto del Inglés"
+    },
+    
+    "live_action_raw": {
+        "message": "Live Action - Raw"
+    },
+    
+    "pictures": {
+        "message": "Imágenes"
+    },
+    
+    "pictures_graphics": {
+        "message": "Imágenes - Gráficos"
+    },
+    
+    "pictures_photos": {
+        "message": "Imágenes - Fotos"
+    },
+    
+    "software": {
+        "message": "Software"
+    },
+    
+    "software_applications": {
+        "message": "Software - Aplicaciones"
+    },
+    
+    "software_games": {
+        "message": "Software - Juegos"
+    },
+    
+    "max_results": {
+        "message": "Resultados máximos"
+    },
+    "theme_select": {
+        "message": "Seleccione un tema"
+    },
+    "use_new_styles": {
+        "message": "Utilizar los \"nuevos\" estilos :"
+    },
+    "yes":{
+        "message": "Sí"
+    },
+    "no": {
+        "message": "No"
+    },
+    "hide_others": {
+        "message": "Hide otra después de un clic :"
+    }
+}

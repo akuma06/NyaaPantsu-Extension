@@ -75,3 +75,20 @@ function clear_options() {
     $('#status').fadeOut();
   }, 1500);
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+	var elTotrad = document.querySelectorAll("[data-translate='true']");
+	var l = elTotrad.length;
+	for (var i=0; i < l; i++) {
+		var element = elTotrad[i];
+		var translation_string = element.textContent.replace(/^__MSG_([a-z_]+)__$/i, "$1");
+		if (translation_string === "") console.error("Couldn't parse translation string for element #"+i);
+		var message_translated = "";
+		if (element.dataset.translateArg !== undefined) {
+			message_translated = chrome.i18n.getMessage(translation_string, element.dataset.translateArg.split(","));
+		} else {
+			message_translated = chrome.i18n.getMessage(translation_string);
+		}
+		element.textContent = message_translated;
+	}
+});

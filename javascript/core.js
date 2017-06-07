@@ -60,7 +60,7 @@ function process_results(request) {
 	
     activate_effects();
 	if (localStorage.getItem("show_search_loader") == "yes") $('#loader').fadeOut();
-};
+}
 
 function process_response() {
 	process_results(req);    
