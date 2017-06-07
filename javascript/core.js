@@ -72,7 +72,7 @@ function process_search() {
 }
 
 function activate_effects() {
-    $('.blocktitle').click( () => {
+    $('.blocktitle').click(function() {
 		if (localStorage.getItem("hide_others") == "yes") {
 			$(this).parent().parent().siblings('.block').children('.blockcontent').slideUp();
 			$(this).parent().parent().siblings('.block').children('.blockfooter').slideUp();
@@ -183,12 +183,12 @@ $(document).ready(() => {
         });
     });
 
-    $('#dropdown').hover(() => {
+    $('#dropdown').hover(function() {
         $(this).stop().animate({
             'top': '0px'
         }, 500);
         $(this).children('#dropdownarrow').stop().fadeTo(500, 0.0);
-    }, () => {
+    }, function() {
         $(this).stop().animate({
             'top': '-26px'
         }, 500);

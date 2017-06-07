@@ -37,7 +37,7 @@ img {
 	border: 1px solid #cdcbcb;
 	cursor: pointer;
 	display: none;
-	background-image: gradient(linear, 0% 36%, 0% 100%, from(#FFFFFF), to(#D6D6D6));	
+	background-image: linear-gradient(#FFFFFF 36%, #D6D6D6);	
 }
 
 #refresh {
@@ -127,7 +127,7 @@ box-shadow: 0px 0px 20px #000000;
 
 
 .grey {
-	background-image: gradient(linear, 0% 36%, 0% 100%, from(#FFFFFF), to(#D6D6D6));
+	background-image: linear-gradient(#FFFFFF 36%, #D6D6D6);
 	color: #000000;
 }
 
@@ -148,7 +148,7 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .teal {
-	background-image: gradient(linear, left bottom, left top, color-stop(0.18, rgb(16,126,123)), color-stop(0.59, rgb(42,164,160)), color-stop(1, rgb(72,197,192)));
+	background-image: linear-gradient(to left top, rgb(16,126,123) 18%, rgb(42,164,160) 59%, rgb(72,197,192) 100%);
 	color: #ffffff;
 }
 
@@ -171,7 +171,7 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .blue {
-	background-image: gradient(linear, left bottom, left top, color-stop(0.18, rgb(0,70,117)), color-stop(0.59, rgb(40,126,184)), color-stop(1, rgb(112,186,235)));
+	background-image: linear-gradient(to left top, rgb(0,70,117) 18%, rgb(40,126,184) 59%, rgb(112,186,235) 100%);
 	color: #ffffff;
 }
 
@@ -194,7 +194,7 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .red {
-	background-image: gradient(linear, left top, left bottom, color-stop(0.18, rgb(209,7,7)), color-stop(0.59, rgb(138,2,2)), color-stop(1, rgb(92,2,2)));
+	background-image: linear-gradient(to left bottom, rgb(209,7,7) 18%, rgb(138,2,2) 59%, rgb(92,2,2) 100%);
 	color: #ffffff;
 }
 
@@ -217,7 +217,7 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .green {
-	background-image: gradient(linear, left bottom, left top, color-stop(0, rgb(3,48,12)), color-stop(0.83, rgb(36,171,63)));
+	background-image: linear-gradient(to left top, rgb(3,48,12) 0, rgb(36,171,63) 83%);
 	color: #ffffff;
 }
 
@@ -240,7 +240,7 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .sunrise {
-	background-image: gradient(linear,left bottom,left top,color-stop(0, rgb(255,255,0)),color-stop(0.67, rgb(255,162,0)),color-stop(1, rgb(166,216,255)));
+	background-image: linear-gradient(to left top, rgb(255,255,0) 0, rgb(255,162,0) 67%, rgb(166,216,255) 100%);
 	color: #035594;
 }
 
@@ -267,7 +267,7 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .chromed {
-	background-image: gradient(linear,left bottom,left top,color-stop(0, rgb(132,138,143)),color-stop(0.45, rgb(199,199,199)),color-stop(0.47, rgb(240,240,240)),color-stop(0.77, rgb(189,189,189)),color-stop(1, rgb(240,240,240)));
+	background-image: linear-gradient(to left top, rgb(132,138,143) 0, rgb(199,199,199) 45%, rgb(240,240,240) 47%, rgb(189,189,189) 77%, rgb(240,240,240) 100%);
 	color: #000000;
 	text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
@@ -297,13 +297,13 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .midnight {
-	background-image: gradient(linear,left bottom,left top,color-stop(0, rgb(0,53,145)),color-stop(0.45, rgb(0,35,92)),color-stop(1, rgb(0,14,38)));
+	background-image: linear-gradient(to left top, rgb(0,53,145) 0, rgb(0,35,92) 45%, rgb(0,14,38) 100%);
 	color: #ffffff;
 	border: 1px solid #000000;
 }
 
 .midnightbg {
-	background-image: gradient(linear,left bottom,left top,color-stop(0, rgb(0,4,20)),color-stop(1, rgb(2,17,84)));
+	background-image: linear-gradient(to left top, rgb(0,4,20) 0, rgb(2,17,84) 100%);
 }
 
 .midnightarrow  {
@@ -329,7 +329,7 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .eclipse {
-	background-image: gradient(linear,left bottom,left top,color-stop(0, rgb(0,0,0)),color-stop(1, rgb(71,71,71)));
+	background-image: linear-gradient(to left top, rgb(0,0,0) 0, rgb(71,71,71) 100%);
 	box-shadow: 0 0 6px rgba(255, 255, 255, 1);
 	outline:none;
     transition: all 0.25s ease-in-out;
@@ -363,7 +363,7 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .nouveaublue {
-	background-image: gradient(linear, left top, left bottom, color-stop(0%,#1E5799), color-stop(50%,#2989D8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));
+	background-image: linear-gradient(to left bottom,  #1E5799 0, #2989D8 50%, #207cca 51%, #7db9e8 100%);
 	box-shadow: 0 0 6px rgba(255, 255, 255, 1);
 	outline:none;
     transition: all 0.25s ease-in-out;
@@ -396,7 +396,7 @@ box-shadow: 0px 0px 20px #000000;
 }
 
 .nouveauemerald {
-	background-image: gradient(linear, left top, left bottom, color-stop(0%,#9dd53a), color-stop(50%,#a1d54f), color-stop(51%,#80c217), color-stop(100%,#7cbc0a));
+	background-image: linear-gradient(to left bottom,  #9dd53a 0%, #a1d54f 50%, #80c217 51%,  #7cbc0a 100%);
 	box-shadow: 0 0 6px rgba(255, 255, 255, 1);
 	outline:none;
     transition: all 0.25s ease-in-out;
@@ -430,7 +430,7 @@ box-shadow: 0px 0px 20px #000000;
 
 
 .nouveauteal {
-	background-image: gradient(linear, left top, left bottom, color-stop(0%,#71DCBC), color-stop(50%,#82F2D4), color-stop(51%,#71DCBC), color-stop(100%,#A3EDD7));
+	background-image: linear-gradient(to left bottom, #71DCBC 0, #82F2D4 50%, #71DCBC 51%, #A3EDD7 100%);
 	box-shadow: 0 0 6px rgba(255, 255, 255, 1);
 	outline:none;
     transition: all 0.25s ease-in-out;
@@ -491,7 +491,7 @@ box-shadow: 0px 0px 20px #000000;
 
 #noresults {
 	/* background: #eeeeee url('../images/sadface.png') center center no-repeat; */
-	background-image: gradient(linear,left bottom,left top,color-stop(0, rgb(161,161,161)),color-stop(1, rgb(238,238,238)));
+	background-image: linear-gradient(to left top, rgb(161,161,161) 0, rgb(238,238,238) 100%);
 	background-repeat: no-repeat;
 	background-position: top left;
 	position: fixed;
@@ -634,7 +634,7 @@ textarea, input {
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
 	border: 1px solid #0073ea;
-	background: gradient(linear, left top, left bottom, color-stop(0%,#b7deed), color-stop(50%,#71ceef), color-stop(51%,#21b4e2), color-stop(100%,#b7deed));
+	background: linear-gradient(to left bottom, #b7deed 0, #71ceef 50%, #21b4e2 51%, #b7deed 100%);
 	font-weight: bold;
 	color: #ffffff;
 	cursor: pointer;
