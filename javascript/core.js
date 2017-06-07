@@ -1,6 +1,6 @@
 var req = chrome.extension.getBackgroundPage().req;
 var search = chrome.extension.getBackgroundPage().search;
-var maxitems = localStorage["max_results"];
+var maxitems = localStorage.getItem("max_results");
 
 
 function process_response() {
@@ -17,15 +17,11 @@ function process_response() {
         requisite = items.length;
     }
 	
-	var genre = localStorage["default_genre"];
-    var theme = localStorage["theme"];
-    if (genre == "") {};
-    var genre_array = genre.split('_');
-    var catid = genre_array[0];
-    var subcatid = genre_array[1];
+    var theme = localStorage.getItem("theme");
+
 	$('#content').html("");
 	for (var displayitems = 0; displayitems < requisite; displayitems++) {
-		if (localStorage["new_style"] == 'yes') {
+		if (localStorage.getItem("new_style") == 'yes') {
 			$('#content').html($('#content').html() + '<div id="news' + displayitems + '" class="block"><div class="blockheader ' + theme + '"><div class="blocktitle"></div><div class="blocklink"></div></div><div class="blockcontent ' + theme + 'content newstyle"></div><div class="blockfooter ' + theme + 'footer"></div></div>');
 		} else {
 			$('#content').html($('#content').html() + '<div id="news' + displayitems + '" class="block"><div class="blockheader ' + theme + '"><div class="blocktitle"></div><div class="blocklink"></div></div><div class="blockcontent ' + theme + 'content"></div><div class="blockfooter ' + theme + 'footer"></div></div>');
@@ -58,7 +54,7 @@ function process_response() {
 
 	
     activate_effects();
-	if (localStorage["show_search_loader"] == "yes") $('#loader').fadeOut();
+	if (localStorage.getItem("show_search_loader") == "yes") $('#loader').fadeOut();
 }
 
 
@@ -82,16 +78,12 @@ function process_search() {
 		$('#noresults').fadeOut();
 	}
 	
-    var genre = localStorage["default_genre"];
-    var theme = localStorage["theme"];
-    if (genre == "") {};
-    var genre_array = genre.split('_');
-    var catid = genre_array[0];
-    var subcatid = genre_array[1];
+    var theme = localStorage.getItem("theme");
+
 	$('#content').html("");
 
     for (var displayitems = 0; displayitems < requisite; displayitems++) {
-		if (localStorage["new_style"] == 'yes') {
+		if (localStorage.getItem("new_style") == 'yes') {
 			$('#content').html($('#content').html() + '<div id="news' + displayitems + '" class="block"><div class="blockheader ' + theme + '"><div class="blocktitle"></div><div class="blocklink"></div></div><div class="blockcontent ' + theme + 'content newstyle"></div><div class="blockfooter ' + theme + 'footer"></div></div>');
 		} else {
 			$('#content').html($('#content').html() + '<div id="news' + displayitems + '" class="block"><div class="blockheader ' + theme + '"><div class="blocktitle"></div><div class="blocklink"></div></div><div class="blockcontent ' + theme + 'content"></div><div class="blockfooter ' + theme + 'footer"></div></div>');
@@ -122,12 +114,12 @@ function process_search() {
 	}
 
 	activate_effects();
-    if (localStorage["show_search_loader"] == "yes") $('#loader').fadeOut();
+    if (localStorage.getItem("show_search_loader") == "yes") $('#loader').fadeOut();
 }
 
 function activate_effects() {
     $('.blocktitle').click(function () {
-		if (localStorage["hide_others"] == "yes") {
+		if (localStorage.getItem("hide_others") == "yes") {
 			$(this).parent().parent().siblings('.block').children('.blockcontent').slideUp();
 			$(this).parent().parent().siblings('.block').children('.blockfooter').slideUp();
 			$(this).parent().siblings('.blockcontent').slideToggle();
@@ -153,7 +145,7 @@ function activate_effects() {
 		});
 		
         chrome.tabs.create({url: $(this).children('a').attr('href')}, function(tab) {
-			if (localStorage["auto_close_tab"] == "yes") {
+			if (localStorage.getItem("auto_close_tab") == "yes") {
 				chrome.extension.getBackgroundPage().clear_tab(tab.id, 1000);
 				chrome.tabs.update(oldtabid, { selected: true });
 			}
@@ -173,55 +165,51 @@ function contains(a, obj){
 
 
 $(document).ready(function () {
-	var genre = localStorage["default_genre"];
-    var theme = localStorage["theme"];
-    if (genre == "") {};
-    var genre_array = genre.split('_');
-    var catid = genre_array[0];
-    var subcatid = genre_array[1];
-    if (localStorage["show_search_loader"] == "no") $('#loader').remove();
+    var theme = localStorage.getItem("theme");
+
+    if (localStorage.getItem("show_search_loader") == "no") $('#loader').remove();
 	
 	
-	if (localStorage["search_terms"] == undefined) localStorage["search_terms"] = "";
-	var searchterms = localStorage["search_terms"];
+	if (localStorage.getItem("search_terms") === null) localStorage.setItem("search_terms", "");
+	var searchterms = localStorage.getItem("search_terms");
 	searchterms = searchterms.split(',');
 	searchterms.sort();
 		$("#searchbox").autocomplete({
 			source: searchterms
 		});
     $('#searchbutton').click(function () {
-			if (localStorage["search_terms"] == undefined || localStorage["search_terms"] == "") {
-				localStorage["search_terms"] = $('#searchbox').val();
+			if (localStorage.getItem("search_terms") === undefined || localStorage.getItem("search_terms") === "") {
+				localStorage.setItem("search_terms", $('#searchbox').val());
 			} else if ($.inArray($('#searchbox').val(), searchterms) == -1){
-				localStorage["search_terms"] += ',' + $('#searchbox').val();
+				localStorage.setItem("search_terms", localStorage.getItem("search_terms") + ',' + $('#searchbox').val());
 			}
 		
 		//searchterms = localStorage["search_terms"];
-		if (localStorage["search_results"] == "inside") {
-			if (localStorage["show_search_loader"] == "yes") $('#loader').fadeIn();
-			search.open("GET", "https://nyaa.pantsu.cat/feed?" + "c=" + catid + "_" + subcatid + "&q=" + $('#searchbox').val(), true);
+		if (localStorage.getItem("search_results") == "inside") {
+			if (localStorage.getItem("show_search_loader") == "yes") $('#loader').fadeIn();
+			search.open("GET", "https://nyaa.pantsu.cat/feed?c=" + localStorage.getItem("default_genre") + "&q=" + $('#searchbox').val(), true);
 			$('#searchbox').val("");
 			$("#searchbox").autocomplete({
 				source: searchterms
 			});
 			search.send(null);
 		} else {
-			chrome.tabs.create({url: "https://nyaa.pantsu.cat/search?c=" + localStorage["default_genre"] + "&s=0&q=" + $('#searchbox').val()});
+			chrome.tabs.create({url: "https://nyaa.pantsu.cat/search?c=" + localStorage.getItem("default_genre") + "&s=0&q=" + $('#searchbox').val()});
 		}
     });
 
     $('#searchbox').keypress(function (event) {
         if (event.keyCode == '13') {
-			if (localStorage["search_terms"] == undefined || localStorage["search_terms"] == "") {
-				localStorage["search_terms"] = $('#searchbox').val();
+			if (localStorage.getItem("search_terms") === undefined || localStorage.getItem("search_terms") === "") {
+				localStorage.setItem("search_terms", $('#searchbox').val());
 			} else if ($.inArray($('#searchbox').val(), searchterms) == -1){
-				localStorage["search_terms"] += ',' + $('#searchbox').val();
+				localStorage.setItem("search_terms", localStorage.getItem("search_terms") + ',' + $('#searchbox').val());
 			}
 			
 			//searchterms = localStorage["search_terms"];
-			if (localStorage["search_results"] == "inside") {
-				if (localStorage["show_search_loader"] == "yes") $('#loader').fadeIn();
-				search.open("GET", "https://nyaa.pantsu.cat/feed?" + "c=" + catid + "_" + subcatid + "&q=" + $('#searchbox').val(), true);
+			if (localStorage.getItem("search_results") == "inside") {
+				if (localStorage.getItem("show_search_loader") == "yes") $('#loader').fadeIn();
+				search.open("GET", "https://nyaa.pantsu.cat/feed?c=" + localStorage.getItem("default_genre") + "&q=" + $('#searchbox').val(), true);
 				$('#searchbox').val("");
 				$("#searchbox").autocomplete({
 					source: searchterms
@@ -229,7 +217,7 @@ $(document).ready(function () {
 				search.send(null);
 				
 			} else {
-				chrome.tabs.create({url: "https://nyaa.pantsu.cat/search?c=" + localStorage["default_genre"] + "&s=0&q=" + $('#searchbox').val()});
+				chrome.tabs.create({url: "https://nyaa.pantsu.cat/search?c=" + localStorage.getItem("default_genre") + "&s=0&q=" + $('#searchbox').val()});
 			}
 			
         }
@@ -237,15 +225,13 @@ $(document).ready(function () {
 
     $('#helplink').click(function () {
         chrome.tabs.create({
-            url: "https://chrome.google.com/extensions/detail/beoinfnicondcdidhmoaiaehnmaebkfk?hl=en-US"
+            url: "https://pantsu.cat/faq"
         });
     });
 
     $('#optionslink').click(function () {
-        chrome.tabs.create({
-            url: 'chrome-extension://' + location.hostname + '/options.html'
-        });
-    })
+		chrome.runtime.openOptionsPage();
+    });
 
     $('#homelink').click(function () {
         chrome.tabs.create({
