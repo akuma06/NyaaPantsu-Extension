@@ -2,8 +2,8 @@ var req = chrome.extension.getBackgroundPage().req;
 var search = chrome.extension.getBackgroundPage().search;
 var maxitems = localStorage.getItem("max_results");
 
-var process_results = (noresults = false) => {
-	var root = req.responseXML.getElementsByTagName('rss')[0];
+function process_results(request) {
+	var root = request.responseXML.getElementsByTagName('rss')[0];
     var channels = root.getElementsByTagName("channel");
     var items = channels[0].getElementsByTagName("item");
 
@@ -14,7 +14,7 @@ var process_results = (noresults = false) => {
     } else {
         requisite = items.length;
     }
-	if ((noresults)&&(items.length <= 0)) {
+	if (items.length <= 0) {
 		$('#content').html('<div id="noresults"><p></p></div>');
 		$('#noresults').fadeIn();
 		return;
@@ -63,12 +63,12 @@ var process_results = (noresults = false) => {
 };
 
 function process_response() {
-	process_results(false);    
+	process_results(req);    
 }
 
 
 function process_search() {
-	process_results(true);
+	process_results(search);
 }
 
 function activate_effects() {
